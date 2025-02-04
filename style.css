@@ -39,18 +39,49 @@ nav a {
 }
 
 nav a:hover {
-    background: #555;
+  background: #555;
 }
+
 nav ul {
-    display: flex; /* Xếp các thẻ li ngang nhau */
-    justify-content: space-between; /* Cách đều các thẻ a */
-    padding: 0; /* Xóa khoảng cách mặc định của ul */
-    margin: 0; /* Xóa khoảng cách mặc định của ul */
+  display: flex; /* Xếp các thẻ li ngang nhau */
+  justify-content: space-between; /* Cách đều các thẻ a */
+  padding: 0; /* Xóa khoảng cách mặc định của ul */
+  margin: 0; /* Xóa khoảng cách mặc định của ul */
 }
-nav li{
+
+nav li {
   list-style-type: none;
   margin: 20px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Chuyển các thẻ li thành cột */
+    align-items: center; /* Căn giữa các thẻ a */
+  }
+
+  nav a {
+    font-size: 24px; /* Giảm kích thước chữ trên màn hình nhỏ */
+    padding: 8px 12px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Các thẻ li xếp thành cột */
+    gap: 10px; /* Thêm khoảng cách giữa các thẻ li */
+  }
+
+  nav li {
+    margin: 10px 0; /* Giảm khoảng cách trên màn hình nhỏ */
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 20px; /* Giảm thêm kích thước chữ cho màn hình rất nhỏ */
+  }
+}
+
 /* Phần tử chứa các ảnh */
 .container {
     display: grid;
